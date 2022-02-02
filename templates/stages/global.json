@@ -1,0 +1,3 @@
+{
+  "ssm": "{{ computed_inputs.app_class_name }}Stack"
+}
