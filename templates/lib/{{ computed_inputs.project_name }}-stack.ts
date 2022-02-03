@@ -32,14 +32,6 @@ class {{ computed_inputs.app_class_name }}Stack extends Stack {
     new ContainerEnvComponent(this, '{{ computed_inputs.app_class_name }}Container', {
       clusterName: '{{ computed_inputs.app_class_name }}Cluster',
       containerInsights: {% if inputs.container_insights %}true{% else %}false{% endif %},
-      ingressIpv4Source: [
-        {% set ingress_ipv4_sources = inputs.container_ingress_ipv4_sources.replace(' ', '').split(',') %}
-        {% for ingress_ipv4_source in ingress_ipv4_sources %}
-        '{{ ingress_ipv4_source }}',
-        {% endfor %}
-      ],
-      internetFacing: {% if inputs.internet_facing %}true{% else %}false{% endif %},
-      sampleApp: {% if inputs.sample_app %}true{% else %}false{% endif %},
       subnets: vpcEnvComponent.subnets,
       vpc: vpcEnvComponent.vpc,
     });

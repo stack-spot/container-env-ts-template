@@ -9,9 +9,6 @@ inputs:
   - label: "Application version (e.g. 1.0.0):"
     type: text
     name: project_version
-  - label: "Internet facing:"
-    type: bool
-    name: internet_facing
   - label: "Existing VPC:"
     type: bool
     name: container_has_vpc
@@ -78,15 +75,9 @@ inputs:
       variable: "container_has_vpc"
       operator: "=="
       value: true
-  - label: "Ingress IPv4 sources (e.g. 10.0.0.0/16,10.1.0.0/16):"
-    type: text
-    name: container_ingress_ipv4_sources
   - label: "CloudWatch Container Insights:"
     type: bool
     name: container_insights
-  - label: "Sample app:"
-    type: bool
-    name: sample_app
 computedInputs:
   app_class_name: "{{ inputs.project_name|replace('_', '-')|replace(' ', '-')|title|replace('-', '') }}"
   project_name: "{{ inputs.project_name|replace('_', '-')|replace(' ', '-')|lower }}"
