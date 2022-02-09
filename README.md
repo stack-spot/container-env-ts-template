@@ -1,10 +1,13 @@
 # container-env-ts-template
 
+[![version][badge-version]][releases]
+[![license][badge-license]][license]
+
 Template to create a container environment.
 
-### IAM Least privilege
+## IAM Least privilege
 
-```
+```json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -74,6 +77,10 @@ Template to create a container environment.
 - [Git][git]
 - [Node.js 16][nodejs]
 
+[badge-license]: https://img.shields.io/github/license/stack-spot/container-env-ts-template
+[badge-version]: https://img.shields.io/github/v/tag/stack-spot/container-env-ts-template?include_prereleases
 [editorconfig]: https://editorconfig.org/
 [git]: https://git-scm.com/downloads
+[license]: https://github.com/stack-spot/container-env-ts-template/blob/main/LICENSE
 [nodejs]: https://nodejs.org/en/download/
+[releases]: https://github.com/stack-spot/container-env-ts-template/releases
